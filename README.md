@@ -1,4 +1,4 @@
-i2 GDM
+Infinity2 GDM Theme
 ====
 
 infinity2 is a clean and flat style GDM theme. Theme includes retina ready icons by Open Iconic.
