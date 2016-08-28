@@ -1,0 +1,8 @@
+[GdmGreeterTheme]
+Encoding=UTF-8
+Greeter=theme.xml
+Name=infinity2
+Description=Clean and flat GDM theme
+Author=@hwnd
+Copyright=CC
+Screenshot=ss.png

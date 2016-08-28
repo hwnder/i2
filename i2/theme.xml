@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+
+<!--
+ //== infinity2 gdm theme
+ //== developed and built by @hwnd
+ //== revision build: 0.1a
+-->
+
+<greeter>
+
+ <item type="rect">
+   <normal color="#2d2f31" />
+   <pos x="0" y="0" height="100%" width="100%" />
+ </item>
+
+ <item type="rect">
+   <pos x="50%" y="50%" height="box" width="box" anchor="c" />
+   <box spacing="5" orientation="horizontal">
+
+   <item type="svg">
+     <normal file="svg/user.svg" />
+     <pos x="50%" y="50%" height="100" width="scale" anchor="c" />
+   </item>
+
+   <item type="rect">
+     <pos height="box" width="box" />
+     <box spacing="10" orientation="vertical">
+     <item type="rect">
+       <pos height="60" width="200" />
+     </item>
+
+     <item type="label" id="pam-prompt">
+       <normal color="#a3a4a8" font="Sans 9" />
+       <pos min-width="100" />
+       <stock type="username-label" />
+     </item>
+
+     <item type="rect">
+       <normal color="#a3a4a8" />
+       <pos height="24" width="180" />
+       <fixed>
+       <item type="entry" id="user-pw-entry">
+         <pos x="1" y="1" height="-2" width="-2" anchor="nw" />
+       </item>
+       </fixed>
+     </item>
+
+     <item type="rect">
+       <pos height="30" width="200" />
+     </item>
+
+     <!-- caps lock warning -->
+     <item type="label" id="caps-lock-warning">
+       <normal color="#c8c8cc" font="Sans 9 Bold" />
+       <pos y="-55" anchor="nw" />
+       <stock type="caps-lock-warning" />
+     </item>
+
+     </box>
+   </item>
+  </box>
+ </item>
+
+
+<!--
+ //== icon navbar -->
+
+<!--
+  //== navbar grid-line
+
+  // <item type="rect">
+  //   <normal color="#a3a4a8" alpha="0.20" />
+  //   <pos y="93%" height="1" width="100%" anchor="sw" />
+  //  </item>
+-->
+
+ <item type="rect">
+   <pos x="15" y="100%" height="8%" width="100%" anchor="sw" />
+   <box xpadding="10" spacing="10" orientation="horizontal">
+
+   <item type="rect" id="language_button" button="true">
+     <pos y="50%" height="box" width="box" anchor="w" />
+     <box xpadding="6" spacing="2" orientation="horizontal">
+     <item type="svg">
+       <normal file="svg/language.svg" alpha="1" />
+       <prelight file="svg/language-prelight.svg" />
+       <pos height="26" width="scale" />
+     </item>
+     </box>
+   </item>
+
+   <item type="rect" id="session_button" button="true">
+     <pos y="50%" height="box" width="box" anchor="w" />
+     <box xpadding="6" spacing="2" orientation="horizontal">
+     <item type="svg">
+       <normal file="svg/session.svg" alpha="1" />
+       <prelight file="svg/session-prelight.svg" />
+       <pos height="30" width="scale" />
+     </item>
+     </box>
+   </item>
+
+   <item type="rect" id="suspend_button" button="true">
+     <show type="suspend" modes="console" />
+     <pos y="50%" height="box" width="box" anchor="w" />
+     <box xpadding="6" spacing="2" orientation="horizontal">
+     <item type="svg">
+       <normal file="svg/suspend.svg" alpha="1" />
+       <prelight file="svg/suspend-prelight.svg" />
+       <pos height="30" width="scale" />
+     </item>
+     </box>
+   </item>
+
+   <item type="rect" id="reboot_button" button="true">
+     <show type="reboot" modes="console" />
+     <pos y="50%" height="box" width="box" anchor="w" />
+     <box xpadding="6" spacing="2" orientation="horizontal">
+     <item type="svg">
+       <normal file="svg/reboot.svg" alpha="1" />
+       <prelight file="svg/reboot-prelight.svg" />
+       <pos height="30" width="scale" />
+     </item>
+     </box>
+   </item>
+
+   <item type="rect" id="halt_button" button="true">
+     <show type="halt" modes="console" />
+     <pos y="50%" height="box" width="box" anchor="w" />
+     <box xpadding="6" spacing="2" orientation="horizontal">
+     <item type="svg">
+       <normal file="svg/shutdown.svg" alpha="1" />
+       <prelight file="svg/shutdown-prelight.svg" />
+       <pos height="30" width="scale" />
+     </item>
+     </box>
+   </item>
+
+   </box>
+ </item>
+
+
+<!-- 
+ //== hostname/release name -->
+
+ <item type="rect">
+   <pos x="100%" y="100%" height="8%" width="box" anchor="se" />
+   <box xpadding="10" spacing="10" orientation="horizontal">
+   <item type="label" id="hostname">
+     <normal color="#a3a4a8" font="Sans 9" />
+     <pos x="90%" y="50%" anchor="e" />
+     <text>%h // %s %r</text>
+   </item>
+  </box>
+ </item>
+
+
+<!--
+ //== timed-label display
+ //== error-prompt display -->
+
+ <item type="rect" id="timed-rect">
+   <show type="timed" />
+   <normal color="#c8c8cc" />
+   <pos x="50%" y="65%" height="box" width="box" anchor="c" />
+   <box xpadding="10" ypadding="5" min-width="400" orientation="vertical">
+   <item type="label" id="timed-label">
+     <normal color="#c8c8cc" font="Sans 9" />
+     <pos x="50%" anchor="n" />
+     <stock type="timed-label" />
+   </item>
+   </box>
+ </item>
+
+ <item type="label" id="pam-error">
+   <normal color="#c8c8cc" font="Sans 9" />
+   <pos x="50%" y="60%" anchor="c" />
+   <text></text>
+ </item>
+
+</greeter>
